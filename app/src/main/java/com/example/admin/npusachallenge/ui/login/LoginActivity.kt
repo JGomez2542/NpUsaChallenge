@@ -6,7 +6,7 @@ import android.view.View
 import com.example.admin.npusachallenge.AppController
 import com.example.admin.npusachallenge.base.BaseActivity
 import com.example.admin.npusachallenge.databinding.ActivityLoginBinding
-import com.example.admin.npusachallenge.di.activity.LoginContractModule
+import com.example.admin.npusachallenge.di.activity.ContractModule
 import com.example.admin.npusachallenge.ui.MainScreen.MainScreenActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import javax.inject.Inject
@@ -23,7 +23,7 @@ class LoginActivity : BaseActivity<LoginContract.Presenter>(), LoginContract.Vie
     override fun init() {
         (application as AppController)
             .appComponent
-            .newActivityComponent(LoginContractModule(this as BaseActivity<*>))
+            .newActivityComponent(ContractModule(this as BaseActivity<*>))
             .inject(this)
     }
 

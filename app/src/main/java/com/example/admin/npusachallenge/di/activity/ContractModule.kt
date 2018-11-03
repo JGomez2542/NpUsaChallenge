@@ -14,7 +14,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class LoginContractModule(private val baseActivity: BaseActivity<*>) {
+class ContractModule(private val baseActivity: BaseActivity<*>) {
 
     @Provides
     @ActivityScope

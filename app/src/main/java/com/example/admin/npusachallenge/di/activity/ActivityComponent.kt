@@ -5,7 +5,7 @@ import com.example.admin.npusachallenge.ui.login.LoginActivity
 import dagger.Subcomponent
 
 @ActivityScope
-@Subcomponent(modules = [LoginContractModule::class])
+@Subcomponent(modules = [ContractModule::class])
 interface ActivityComponent {
 
     fun inject(loginActivity: LoginActivity)

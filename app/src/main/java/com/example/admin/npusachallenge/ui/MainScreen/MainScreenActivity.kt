@@ -7,7 +7,7 @@ import android.view.animation.RotateAnimation
 import com.example.admin.npusachallenge.AppController
 import com.example.admin.npusachallenge.base.BaseActivity
 import com.example.admin.npusachallenge.databinding.ActivityMainBinding
-import com.example.admin.npusachallenge.di.activity.LoginContractModule
+import com.example.admin.npusachallenge.di.activity.ContractModule
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
@@ -26,7 +26,7 @@ class MainScreenActivity : BaseActivity<MainScreenContract.Presenter>(), MainScr
     override fun init() {
         (application as AppController)
             .appComponent
-            .newActivityComponent(LoginContractModule(this as BaseActivity<*>))
+            .newActivityComponent(ContractModule(this as BaseActivity<*>))
             .inject(this)
     }
 

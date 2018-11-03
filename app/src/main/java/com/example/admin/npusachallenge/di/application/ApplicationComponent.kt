@@ -1,7 +1,7 @@
 package com.example.admin.npusachallenge.di.application
 
 import com.example.admin.npusachallenge.di.activity.ActivityComponent
-import com.example.admin.npusachallenge.di.activity.LoginContractModule
+import com.example.admin.npusachallenge.di.activity.ContractModule
 import dagger.Component
 
 @ApplicationScope
@@ -9,6 +9,6 @@ import dagger.Component
 interface ApplicationComponent {
 
     fun newActivityComponent(
-        loginContractModule: LoginContractModule
+        contractModule: ContractModule
     ): ActivityComponent
 }
